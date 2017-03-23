@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Emotion.forms", "Emotion.forms\Emotion.forms\Emotion.forms.shproj", "{42B76C9E-1095-42B4-A342-1F26D1224FCC}"
 EndProject
@@ -16,6 +16,7 @@ Global
 		Emotion.forms\Emotion.forms\Emotion.forms.projitems*{2f82570a-0ebc-4dcf-94c3-c7c0e052d91c}*SharedItemsImports = 4
 		Emotion.forms\Emotion.forms\Emotion.forms.projitems*{42b76c9e-1095-42b4-a342-1f26d1224fcc}*SharedItemsImports = 13
 		Emotion.forms\Emotion.forms\Emotion.forms.projitems*{6359df23-f6c5-4685-a715-bc061170bf03}*SharedItemsImports = 4
+		Emotion.forms\Emotion.forms\Emotion.forms.projitems*{b2737074-f782-451b-b5cc-fdee552b8abf}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -81,8 +82,6 @@ Global
 		{2F82570A-0EBC-4DCF-94C3-C7C0E052D91C}.AppStore|x86.Build.0 = Release|Any CPU
 		{2F82570A-0EBC-4DCF-94C3-C7C0E052D91C}.AppStore|x86.Deploy.0 = Release|Any CPU
 		{2F82570A-0EBC-4DCF-94C3-C7C0E052D91C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F82570A-0EBC-4DCF-94C3-C7C0E052D91C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F82570A-0EBC-4DCF-94C3-C7C0E052D91C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{2F82570A-0EBC-4DCF-94C3-C7C0E052D91C}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{2F82570A-0EBC-4DCF-94C3-C7C0E052D91C}.Debug|ARM.Build.0 = Debug|Any CPU
 		{2F82570A-0EBC-4DCF-94C3-C7C0E052D91C}.Debug|ARM.Deploy.0 = Debug|Any CPU
@@ -184,7 +183,9 @@ Global
 		{B2737074-F782-451B-B5CC-FDEE552B8ABF}.AppStore|x86.ActiveCfg = Release|x86
 		{B2737074-F782-451B-B5CC-FDEE552B8ABF}.AppStore|x86.Build.0 = Release|x86
 		{B2737074-F782-451B-B5CC-FDEE552B8ABF}.AppStore|x86.Deploy.0 = Release|x86
-		{B2737074-F782-451B-B5CC-FDEE552B8ABF}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B2737074-F782-451B-B5CC-FDEE552B8ABF}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{B2737074-F782-451B-B5CC-FDEE552B8ABF}.Debug|Any CPU.Build.0 = Debug|x64
+		{B2737074-F782-451B-B5CC-FDEE552B8ABF}.Debug|Any CPU.Deploy.0 = Debug|x64
 		{B2737074-F782-451B-B5CC-FDEE552B8ABF}.Debug|ARM.ActiveCfg = Debug|ARM
 		{B2737074-F782-451B-B5CC-FDEE552B8ABF}.Debug|ARM.Build.0 = Debug|ARM
 		{B2737074-F782-451B-B5CC-FDEE552B8ABF}.Debug|ARM.Deploy.0 = Debug|ARM
