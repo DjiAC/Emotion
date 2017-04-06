@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Emotion.forms"
              x:Class="Emotion.forms.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
+	<Label Text="Welcome to Xamarin Forms test!" 
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
 
