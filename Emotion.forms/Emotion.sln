@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Emotion.forms", "Emotion.forms\Emotion.forms\Emotion.forms.shproj", "{42B76C9E-1095-42B4-A342-1F26D1224FCC}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Emotion.Core", "Emotion.forms\Emotion.forms\Emotion.Core.shproj", "{42B76C9E-1095-42B4-A342-1F26D1224FCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emotion.forms.Android", "Emotion.forms\Emotion.forms.Android\Emotion.forms.Android.csproj", "{2F82570A-0EBC-4DCF-94C3-C7C0E052D91C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emotion.Android", "Emotion.forms\Emotion.forms.Android\Emotion.Android.csproj", "{2F82570A-0EBC-4DCF-94C3-C7C0E052D91C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emotion.forms.iOS", "Emotion.forms\Emotion.forms.iOS\Emotion.forms.iOS.csproj", "{6359DF23-F6C5-4685-A715-BC061170BF03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emotion.iOS", "Emotion.forms\Emotion.forms.iOS\Emotion.iOS.csproj", "{6359DF23-F6C5-4685-A715-BC061170BF03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emotion.forms.UWP", "Emotion.forms\Emotion.forms.UWP\Emotion.forms.UWP.csproj", "{B2737074-F782-451B-B5CC-FDEE552B8ABF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emotion.UWP", "Emotion.forms\Emotion.forms.UWP\Emotion.UWP.csproj", "{B2737074-F782-451B-B5CC-FDEE552B8ABF}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

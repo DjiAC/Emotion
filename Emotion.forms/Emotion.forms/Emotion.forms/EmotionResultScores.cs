@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Emotion.forms
+namespace Emotion.Core
 {
     /// <summary>
     /// Class for scores
@@ -47,7 +47,6 @@ namespace Emotion.forms
         /// <summary>
         /// Surprise scores
         /// </summary>
-        public float surprise { get; set; }       
-      
+        public float surprise { get; set; }
     }
 }

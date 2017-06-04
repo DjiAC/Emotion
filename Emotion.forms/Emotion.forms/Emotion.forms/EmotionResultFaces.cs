@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Emotion.forms
+namespace Emotion.Core
 {
     /// <summary>
     /// Class for faceRectangles attributes
@@ -10,14 +10,14 @@ namespace Emotion.forms
     public class EmotionResultFaces
     {
         /// <summary>
-        /// Position from Left
-        /// </summary>
-        public int left { get; set; }
-
-        /// <summary>
         /// Position from top
         /// </summary>
         public int top { get; set; }
+
+        /// <summary>
+        /// Position from Left
+        /// </summary>
+        public int left { get; set; }        
 
         /// <summary>
         /// Width of faceRectangles

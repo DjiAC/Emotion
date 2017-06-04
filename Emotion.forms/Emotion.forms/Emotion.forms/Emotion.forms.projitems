@@ -12,7 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Connect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EmotionConnect.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EmotionResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EmotionResultFaces.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EmotionResultScores.cs" />

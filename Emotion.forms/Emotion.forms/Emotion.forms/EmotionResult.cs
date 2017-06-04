@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Emotion.forms
+namespace Emotion.Core
 {
     /// <summary>
     /// Class for Emotion analysis results
@@ -18,10 +18,5 @@ namespace Emotion.forms
         /// List of the scores
         /// </summary>
         List<EmotionResultScores> Scores { get; set; }
-
-        public EmotionResult()
-        {
-
-        }
     }
 }
