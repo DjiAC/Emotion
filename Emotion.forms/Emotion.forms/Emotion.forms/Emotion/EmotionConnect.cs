@@ -10,10 +10,12 @@ using System.Net.Http.Headers;
 namespace Emotion.Core
 {
     /// <summary>
-    /// Connection to Cognitive Services Microsoft API
+    /// Connection to Cognitive Services Microsoft API - EMOTION
     /// </summary>
     public class EmotionConnect
     {
+        #region Var/Properties/Constructor
+
         /// <summary>
         /// Differents Connection Response Status
         /// </summary>
@@ -27,27 +29,19 @@ namespace Emotion.Core
         /// <summary>
         /// List of Emotions Response - EmotionResult format
         /// </summary>
-        public List<EmotionResult> emotionResults { get; set; }
+        public List<EmotionResults> emotionResults { get; set; }
 
         /// <summary>
         /// Constructor
         /// </summary>
         public EmotionConnect()
         {
-            emotionResults = new List<EmotionResult>();
+            emotionResults = new List<EmotionResults>();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="imagePath">Tested image path</param>
-        /// <returns></returns>
-        public byte[] GetImageAsByteArray(string imagePath)
-        {
-            FileStream fileStream = new FileStream(imagePath, FileMode.Open, FileAccess.Read);
-            BinaryReader binaryReader = new BinaryReader(fileStream);
-            return binaryReader.ReadBytes((int)fileStream.Length);
-        }
+        #endregion
+
+        #region Call Web Service
 
         /// <summary>
         /// Cognitives Emotion Service call
@@ -88,7 +82,7 @@ namespace Emotion.Core
             // Try Deserialize response
             try
             {
-                var deserializedResult = JsonConvert.DeserializeObject<List<EmotionResult>>(responseContent);
+                var deserializedResult = JsonConvert.DeserializeObject<List<EmotionResults>>(responseContent);
             }
             // Catch Deserialize problem -> means the json returned a json is state an error
             catch (Exception)
@@ -109,5 +103,23 @@ namespace Emotion.Core
                 return ConnectionResults.noFace;
             }            
         }
+
+        #endregion
+
+        #region Transform to Byte
+
+        /// <summary>
+        /// Transform Image to Analyse in Byte Array
+        /// </summary>
+        /// <param name="imagePath">Tested image path</param>
+        /// <returns></returns>
+        public byte[] GetImageAsByteArray(string imagePath)
+        {
+            FileStream fileStream = new FileStream(imagePath, FileMode.Open, FileAccess.Read);
+            BinaryReader binaryReader = new BinaryReader(fileStream);
+            return binaryReader.ReadBytes((int)fileStream.Length);
+        }
+
+        #endregion
     }
 }

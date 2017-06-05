@@ -7,26 +7,26 @@ namespace Emotion.Core
     /// <summary>
     /// Class for faceRectangles attributes
     /// </summary>
-    public class EmotionResultFaces
+    public class EmotionResultsFaces
     {
         /// <summary>
         /// Position from top
         /// </summary>
-        public int top { get; set; }
+        public double top { get; set; }
 
         /// <summary>
         /// Position from Left
         /// </summary>
-        public int left { get; set; }        
+        public double left { get; set; }        
 
         /// <summary>
         /// Width of faceRectangles
         /// </summary>
-        public int width { get; set; }
+        public double width { get; set; }
 
         /// <summary>
         /// Height of faceRectangles
         /// </summary>
-        public int height { get; set; }
+        public double height { get; set; }
     }
 }

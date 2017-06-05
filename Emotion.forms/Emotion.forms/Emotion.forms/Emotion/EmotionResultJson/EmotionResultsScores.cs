@@ -7,8 +7,8 @@ namespace Emotion.Core
     /// <summary>
     /// Class for scores
     /// </summary>
-    public class EmotionResultScores
-    {        
+    public class EmotionResultsScores
+    {
         /// <summary>
         /// Anger scores
         /// </summary>

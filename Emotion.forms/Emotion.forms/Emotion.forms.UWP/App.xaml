@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="Emotion.forms.UWP.App"
+    x:Class="Emotion.UWP.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Emotion.forms.UWP"
+    xmlns:local="using:Emotion.UWP"
     RequestedTheme="Light">
 
 </Application>

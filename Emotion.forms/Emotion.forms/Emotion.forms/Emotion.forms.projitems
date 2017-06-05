@@ -12,14 +12,25 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)EmotionConnect.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)EmotionResult.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)EmotionResultFaces.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)EmotionResultScores.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Emotion\EmotionConnect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Emotion\EmotionResultJson\EmotionResults.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Emotion\EmotionResultJson\EmotionResultsFaces.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Emotion\EmotionResultJson\EmotionResultsScores.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ImageAnalyzer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsConnect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsJsonFormat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsSentimentDocuments.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsSentiment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsKeyPhrases.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsLanguages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsDetectedLanguages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsErrors.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsKeyPhrasesDocuments.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsLanguagesDocuments.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResults.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml">
@@ -30,5 +41,8 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Emotion\EmotionResultJson\" />
   </ItemGroup>
 </Project>

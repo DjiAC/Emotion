@@ -7,16 +7,16 @@ namespace Emotion.Core
     /// <summary>
     /// Class for Emotion analysis results
     /// </summary>
-    public class EmotionResult
+    public class EmotionResults
     {
         /// <summary>
         /// List of the face Rectangles
         /// </summary>
-        List<EmotionResultFaces> FaceRectangles { get; set; }
+        List<EmotionResultsFaces> FaceRectangles { get; set; }
 
         /// <summary>
         /// List of the scores
         /// </summary>
-        List<EmotionResultScores> Scores { get; set; }
+        List<EmotionResultsScores> Scores { get; set; }
     }
 }
