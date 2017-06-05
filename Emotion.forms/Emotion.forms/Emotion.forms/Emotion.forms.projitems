@@ -20,8 +20,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Statistics\EmotionStatistics.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statistics\StatisticsFormat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statistics\TextAnalysisStatistics.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsConnect.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsJsonFormat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResults.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsSentimentDocuments.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsSentiment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsKeyPhrases.cs" />
@@ -30,7 +34,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsErrors.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsKeyPhrasesDocuments.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsLanguagesDocuments.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResults.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml">
