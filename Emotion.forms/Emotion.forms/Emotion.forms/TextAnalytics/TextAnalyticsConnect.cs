@@ -32,11 +32,18 @@ namespace Emotion.Core
         public TextAnalyticsResults textAnalyticsResults { get; set; }
 
         /// <summary>
+        /// Text Analysis Statistics
+        /// </summary>
+        public List<TextAnalysisStatistics> textAnalysisStats { get; set; }
+
+        /// <summary>
         /// Constructor
         /// </summary>
         public TextAnalyticsConnect()
         {
             textAnalyticsResults = new TextAnalyticsResults();
+
+            textAnalysisStats = Statistics.GetTextAnalysisStats();
         }
 
         #endregion

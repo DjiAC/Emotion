@@ -32,11 +32,18 @@ namespace Emotion.Core
         public List<EmotionResults> emotionResults { get; set; }
 
         /// <summary>
+        /// Emotion Statistics
+        /// </summary>
+        public List<EmotionStatistics> emotionStats { get; set; }
+
+        /// <summary>
         /// Constructor
         /// </summary>
         public EmotionConnect()
         {
             emotionResults = new List<EmotionResults>();
+
+            emotionStats = Statistics.GetEmotionStats();
         }
 
         #endregion

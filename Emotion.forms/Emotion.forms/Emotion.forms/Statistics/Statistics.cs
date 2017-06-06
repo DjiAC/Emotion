@@ -10,13 +10,13 @@ namespace Emotion.Core
     /// <summary>
     /// 
     /// </summary>
-    public class Statistics
+    public static class Statistics
     {
         #region Variables 
 
-        List<EmotionStatistics> EmotionStats = new List<EmotionStatistics>();
+        static List<EmotionStatistics> EmotionStats = new List<EmotionStatistics>();
 
-        List<TextAnalysisStatistics> TextAnalysisStats = new List<TextAnalysisStatistics>();
+        static List<TextAnalysisStatistics> TextAnalysisStats = new List<TextAnalysisStatistics>();
 
         #endregion
 
@@ -25,17 +25,21 @@ namespace Emotion.Core
         /// <summary>
         /// Get Emotion Call Statistics from local JSON File
         /// </summary>
-        public void GetEmotionStats()
+        public static List<EmotionStatistics> GetEmotionStats()
         {
             EmotionStats = JsonConvert.DeserializeObject<List<EmotionStatistics>>(System.IO.File.ReadAllText(@"EmotionStats.json"));
+
+            return EmotionStats;
         }
 
         /// <summary>
         /// Get TextAnalysis Call Statistics from local JSON File
         /// </summary>
-        public void GetTextAnalysisStats()
+        public static List<TextAnalysisStatistics> GetTextAnalysisStats()
         {
             TextAnalysisStats = JsonConvert.DeserializeObject<List<TextAnalysisStatistics>>(System.IO.File.ReadAllText(@"TextAnalysisStats.json"));
+
+            return TextAnalysisStats;
         }
 
         #endregion
@@ -45,7 +49,7 @@ namespace Emotion.Core
         /// <summary>
         /// Update Emotion Call Statistics to local JSON File
         /// </summary>
-        public void UpdateEmotionStats()
+        public static void UpdateEmotionStats()
         {
             System.IO.File.WriteAllText(@"EmotionStats.json", JsonConvert.SerializeObject(EmotionStats));
         }
@@ -53,7 +57,7 @@ namespace Emotion.Core
         /// <summary>
         /// Update TextAnalysis Call Statistics to local JSON File
         /// </summary>
-        public void UpdateTextAnalysisStats()
+        public static void UpdateTextAnalysisStats()
         {
             System.IO.File.WriteAllText(@"TextAnalysisStats.json", JsonConvert.SerializeObject(TextAnalysisStats));
         }
