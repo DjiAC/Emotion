@@ -34,7 +34,7 @@ namespace Emotion.Core
         /// <summary>
         /// Emotion Statistics
         /// </summary>
-        public List<EmotionStatistics> emotionStats { get; set; }
+        public List<EmotionStatistics> emotionConnectStats { get; set; }
 
         /// <summary>
         /// Constructor
@@ -43,7 +43,7 @@ namespace Emotion.Core
         {
             emotionResults = new List<EmotionResults>();
 
-            emotionStats = Statistics.GetEmotionStats();
+            emotionConnectStats = Statistics.GetEmotionStats();
         }
 
         #endregion

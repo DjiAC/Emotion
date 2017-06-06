@@ -49,15 +49,31 @@ namespace Emotion.Core
         /// <summary>
         /// Update Emotion Call Statistics to local JSON File
         /// </summary>
-        public static void UpdateEmotionStats()
-        {
-            System.IO.File.WriteAllText(@"EmotionStats.json", JsonConvert.SerializeObject(EmotionStats));
+        public static void UpdateEmotionStats(List<EmotionStatistics> emotionConnectStats)
+        { 
+            // TODO : Update Emotion Stats
         }
 
         /// <summary>
         /// Update TextAnalysis Call Statistics to local JSON File
         /// </summary>
-        public static void UpdateTextAnalysisStats()
+        public static void UpdateTextAnalysisStats(List<TextAnalysisStatistics> textAnalysisConnectStats)
+        {
+            // TODO : Update Text Analysis Stats
+        }
+
+        /// <summary>
+        /// Update Emotion Call JSON Statistics to local JSON File
+        /// </summary>
+        public static void UpdateEmotionJSONStats()
+        {
+            System.IO.File.WriteAllText(@"EmotionStats.json", JsonConvert.SerializeObject(EmotionStats));
+        }        
+
+        /// <summary>
+        /// Update TextAnalysis Call JSON Statistics to local JSON File
+        /// </summary>
+        public static void UpdateTextAnalysisJSONStats()
         {
             System.IO.File.WriteAllText(@"TextAnalysisStats.json", JsonConvert.SerializeObject(TextAnalysisStats));
         }

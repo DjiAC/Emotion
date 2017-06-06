@@ -34,7 +34,7 @@ namespace Emotion.Core
         /// <summary>
         /// Text Analysis Statistics
         /// </summary>
-        public List<TextAnalysisStatistics> textAnalysisStats { get; set; }
+        public List<TextAnalysisStatistics> textAnalysisConnectStats { get; set; }
 
         /// <summary>
         /// Constructor
@@ -43,7 +43,7 @@ namespace Emotion.Core
         {
             textAnalyticsResults = new TextAnalyticsResults();
 
-            textAnalysisStats = Statistics.GetTextAnalysisStats();
+            textAnalysisConnectStats = Statistics.GetTextAnalysisStats();
         }
 
         #endregion
