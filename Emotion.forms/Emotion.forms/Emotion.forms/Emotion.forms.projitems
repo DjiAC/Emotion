@@ -21,6 +21,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Statistics\EmotionStatistics.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statistics\Statistics.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Statistics\StatisticsFormat.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Statistics\TextAnalysisStatistics.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsConnect.cs" />

@@ -9,41 +9,24 @@ namespace Emotion.Core
     /// </summary>
     public class EmotionStatistics
     {
-        #region Variables & Properties
+        /// <summary>
+        /// Unique ID of Emotion Call
+        /// </summary>
+        public int idEmotionCall { get; set; }
 
         /// <summary>
-        /// Total number of Emotion Calls
+        /// Number of Face detected
         /// </summary>
-        public int totalEmotionCalls { get; set; }
+        public int faceDetected { get; set; }
 
         /// <summary>
-        /// Total List of Emotion Calls Statistics
+        /// Dictionnary of Face with major emotion
         /// </summary>
-        public List<EmotionCallStatistics> totalEmotionCallsStatistics { get; set; }
+        public Tuple<String, int> faceEmotion { get; set; }
 
         /// <summary>
-        /// Mean of Emotion Calls per day
+        /// Date of Emotion Call
         /// </summary>
-        public int emotionCallsPerDay { get; set; }
-
-        /// <summary>
-        /// Mean of Faces per Call
-        /// </summary>
-        public float facesPerCall { get; set; }
-
-        /// <summary>
-        /// Number of Detected Faces per Emotion
-        /// </summary>
-        public Tuple<String, int> detectionPerEmotion { get; set; }
-
-        #endregion
-
-        #region Calculs
-
-        // TODO : Calls per Day - Mean Number of Faces per Call - Number of Faces per Emotion
-
-
-
-        #endregion
+        public DateTime callEmotionDate { get; set; }
     }
 }

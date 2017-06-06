@@ -9,35 +9,24 @@ namespace Emotion.Core
     /// </summary>
     public class TextAnalysisStatistics
     {
-        #region Variables & Properties
+        /// <summary>
+        /// Unique ID of TextAnalysis Call
+        /// </summary>
+        public int idTextAnalysisCall { get; set; }
 
         /// <summary>
-        /// Total number of Text Analysis Calls
+        /// Language detected
         /// </summary>
-        public int totalTextAnalysisCalls { get; set; }
+        public string languageDetected { get; set; }
 
         /// <summary>
-        /// Total List of Text Analysis Calls Statistics
+        /// Sentiment score detected
         /// </summary>
-        public List<TextAnalysisCallStatistics> totalTextAnalysisCallsStatistics { get; set; }
+        public float sentimentScore { get; set; }
 
         /// <summary>
-        /// Mean of Text Analytics Calls per day
+        /// Date of Text Analytics Call
         /// </summary>
-        public int textAnalyticsCallsPerDay { get; set; }
-
-        /// <summary>
-        /// Number of Detected phrases per Language
-        /// </summary>
-        public Tuple<String, int> detectionPerLanguage { get; set; }
-
-        #endregion
-
-        #region Calculs
-
-        // TODO : Calls per day - Language repartition - Number of sentiment per stage ( 0-30 / 31-60 / 61-100)
-
-        #endregion
-
+        public DateTime callTextAnalyticsDate { get; set; }
     }
 }
