@@ -48,4 +48,8 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Emotion\EmotionResultJson\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Statistics\EmotionStats.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Statistics\TextAnalysisStats.json" />
+  </ItemGroup>
 </Project>
