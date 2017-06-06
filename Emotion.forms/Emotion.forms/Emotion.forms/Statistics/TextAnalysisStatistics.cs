@@ -35,6 +35,8 @@ namespace Emotion.Core
 
         #region Calculs
 
+        // TODO : Calls per day - Language repartition - Number of sentiment per stage ( 0-30 / 31-60 / 61-100)
+
         #endregion
 
     }

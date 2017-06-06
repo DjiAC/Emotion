@@ -40,6 +40,8 @@ namespace Emotion.Core
 
         #region Calculs
 
+        // TODO : Calls per Day - Mean Number of Faces per Call - Number of Faces per Emotion
+
         #endregion
     }
 }
