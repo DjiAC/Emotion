@@ -17,11 +17,11 @@ namespace Emotion.Core
         /// <summary>
         /// Key Phrases of the text analysed
         /// </summary>
-        public List<String> keyPhrasesDetected { get; set; }
+        public List<String> keyPhrases { get; set; }
 
         /// <summary>
         /// Sentiment of the text analysed
         /// </summary>
-        public float sentimentDetected { get; set; }
+        public float sentimentScore { get; set; }
     }
 }

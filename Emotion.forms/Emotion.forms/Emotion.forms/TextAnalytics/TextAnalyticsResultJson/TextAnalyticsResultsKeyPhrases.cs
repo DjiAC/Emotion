@@ -17,7 +17,7 @@ namespace Emotion.Core
         /// <summary>
         /// Errors for Key Phrases detection
         /// </summary>
-        public List<TextAnalyticsResultsKeyPhrasesErrors> keyPhrasesErrors { get; set; }
+        public List<TextAnalyticsResultsErrors> keyPhrasesErrors { get; set; }
 
     }
 }

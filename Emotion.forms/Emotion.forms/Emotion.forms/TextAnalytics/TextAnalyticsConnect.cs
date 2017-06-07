@@ -34,7 +34,7 @@ namespace Emotion.Core
         /// <summary>
         /// Text Analysis Statistics
         /// </summary>
-        public List<TextAnalysisStatistics> textAnalysisConnectStats { get; set; }
+        public TextAnalysisStatistics textAnalysisConnectStats { get; set; }
 
         /// <summary>
         /// Constructor
@@ -43,7 +43,7 @@ namespace Emotion.Core
         {
             textAnalyticsResults = new TextAnalyticsResults();
 
-            textAnalysisConnectStats = Statistics.GetTextAnalysisStats();
+            textAnalysisConnectStats = new TextAnalysisStatistics();
         }
 
         #endregion
@@ -288,7 +288,7 @@ namespace Emotion.Core
             // Get Key Phrases
             try
             {
-                textAnalyticsResults.keyPhrasesDetected = keyPhrasesResultJson.documentsKeyPhrases[0].keyPhrases;
+                textAnalyticsResults.keyPhrases = keyPhrasesResultJson.documentsKeyPhrases[0].keyPhrases;
 
                 return new Tuple<ConnectionResults, string>(ConnectionResults.success, "");
             }
@@ -358,7 +358,7 @@ namespace Emotion.Core
             // Get Sentiment
             try
             {
-                textAnalyticsResults.sentimentDetected = sentimentResultJson.documentsSentiment[0].score;
+                textAnalyticsResults.sentimentScore = sentimentResultJson.documentsSentiment[0].score;
 
                 return new Tuple<ConnectionResults, string>(ConnectionResults.success, "");
             }
@@ -426,9 +426,22 @@ namespace Emotion.Core
         /// Send Text Analysis Call Results to Global Stats
         /// </summary>
         /// <param name="textAnalysisResults">TextAnalysis Results from Call</param>
-        public void UpdateTextAnalysisResultsToStats(List<TextAnalyticsResults> textAnalysisResults)
+        public void UpdateTextAnalysisResultsToStats(TextAnalyticsResults textAnalysisResults)
         {
-           // TODO
+            // Unique ID with DateTime Ticks in seconds
+            textAnalysisConnectStats.idTextAnalysisCall = Convert.ToInt32(DateTime.Now.Ticks / 1000000000);
+
+            // Language detected
+            textAnalysisConnectStats.languageDetected = textAnalysisResults.languageDetected;
+
+            // Score of sentiment detected
+            textAnalysisConnectStats.sentimentScore = textAnalysisResults.sentimentScore;
+
+            // DateTime of the call
+            textAnalysisConnectStats.callTextAnalyticsDate = DateTime.Now;
+
+            // Update Global Emotion Stats 
+            Statistics.TextAnalysisStats.Add(textAnalysisConnectStats);
         }
 
         #endregion

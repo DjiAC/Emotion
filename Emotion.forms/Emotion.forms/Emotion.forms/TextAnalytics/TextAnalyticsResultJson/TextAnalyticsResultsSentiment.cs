@@ -17,7 +17,7 @@ namespace Emotion.Core
         /// <summary>
         /// Errors for Sentiment detection
         /// </summary>
-        public List<TextAnalyticsResultsSentimentErrors> sentimentErrors { get; set; }
+        public List<TextAnalyticsResultsErrors> sentimentErrors { get; set; }
 
     }
 }

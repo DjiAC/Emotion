@@ -17,7 +17,7 @@ namespace Emotion.Core
         /// <summary>
         /// Errors for Languages detection
         /// </summary>
-        public List<TextAnalyticsResultsLanguagesErrors> languagesErrors { get; set; }
+        public List<TextAnalyticsResultsErrors> languagesErrors { get; set; }
 
     }
 }
