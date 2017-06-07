@@ -14,9 +14,9 @@ namespace Emotion.Core
     {
         #region Variables 
 
-        static List<EmotionStatistics> EmotionStats = new List<EmotionStatistics>();
+        public static List<EmotionStatistics> EmotionStats = new List<EmotionStatistics>();
 
-        static List<TextAnalysisStatistics> TextAnalysisStats = new List<TextAnalysisStatistics>();
+        public static List<TextAnalysisStatistics> TextAnalysisStats = new List<TextAnalysisStatistics>();
 
         #endregion
 
@@ -44,23 +44,7 @@ namespace Emotion.Core
 
         #endregion
 
-        #region Update Stats
-
-        /// <summary>
-        /// Update Emotion Call Statistics to local JSON File
-        /// </summary>
-        public static void UpdateEmotionStats(List<EmotionStatistics> emotionConnectStats)
-        { 
-            // TODO : Update Emotion Stats
-        }
-
-        /// <summary>
-        /// Update TextAnalysis Call Statistics to local JSON File
-        /// </summary>
-        public static void UpdateTextAnalysisStats(List<TextAnalysisStatistics> textAnalysisConnectStats)
-        {
-            // TODO : Update Text Analysis Stats
-        }
+        #region Update JSON Stats  
 
         /// <summary>
         /// Update Emotion Call JSON Statistics to local JSON File
@@ -85,7 +69,6 @@ namespace Emotion.Core
         // TODO : Calls per Day - Mean Number of Faces per Call - Number of Faces per Emotion
 
         // TODO : Calls per day - Language repartition - Number of sentiment per stage ( 0-30 / 31-60 / 61-100)
-
 
         #endregion
     }

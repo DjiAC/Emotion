@@ -420,5 +420,18 @@ namespace Emotion.Core
 
         #endregion
 
+        #region Update Global Stats
+
+        /// <summary>
+        /// Send Text Analysis Call Results to Global Stats
+        /// </summary>
+        /// <param name="textAnalysisResults">TextAnalysis Results from Call</param>
+        public void UpdateTextAnalysisResultsToStats(List<TextAnalyticsResults> textAnalysisResults)
+        {
+           // TODO
+        }
+
+        #endregion
+
     }
 }

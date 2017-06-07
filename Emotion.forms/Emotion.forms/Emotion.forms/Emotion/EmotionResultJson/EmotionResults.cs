@@ -10,13 +10,13 @@ namespace Emotion.Core
     public class EmotionResults
     {
         /// <summary>
-        /// List of the face Rectangles
+        /// Face Rectangle coordinates
         /// </summary>
-        List<EmotionResultsFaces> FaceRectangles { get; set; }
+        public EmotionResultsFaces FaceRectangle { get; set; }
 
         /// <summary>
         /// List of the scores
         /// </summary>
-        List<EmotionResultsScores> Scores { get; set; }
+        public EmotionResultsScores Scores { get; set; }
     }
 }

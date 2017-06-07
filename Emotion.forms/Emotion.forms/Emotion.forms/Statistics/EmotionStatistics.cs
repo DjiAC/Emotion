@@ -22,7 +22,7 @@ namespace Emotion.Core
         /// <summary>
         /// Dictionnary of Face with major emotion
         /// </summary>
-        public Tuple<String, int> faceEmotion { get; set; }
+        public List<Tuple<int, String>> faceEmotion { get; set; }
 
         /// <summary>
         /// Date of Emotion Call

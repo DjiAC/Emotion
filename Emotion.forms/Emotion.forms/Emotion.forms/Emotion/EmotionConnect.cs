@@ -34,7 +34,7 @@ namespace Emotion.Core
         /// <summary>
         /// Emotion Statistics
         /// </summary>
-        public List<EmotionStatistics> emotionConnectStats { get; set; }
+        public EmotionStatistics emotionConnectStats { get; set; }
 
         /// <summary>
         /// Constructor
@@ -43,7 +43,7 @@ namespace Emotion.Core
         {
             emotionResults = new List<EmotionResults>();
 
-            emotionConnectStats = Statistics.GetEmotionStats();
+            emotionConnectStats = new EmotionStatistics();
         }
 
         #endregion
@@ -89,7 +89,8 @@ namespace Emotion.Core
             // Try Deserialize response
             try
             {
-                var deserializedResult = JsonConvert.DeserializeObject<List<EmotionResults>>(responseContent);
+                emotionResults = JsonConvert.DeserializeObject<List<EmotionResults>>(responseContent);
+
             }
             // Catch Deserialize problem -> means the json returned a json is state an error
             catch (Exception)
@@ -100,8 +101,10 @@ namespace Emotion.Core
             // Check if Face Rectangle found
             if (emotionResults.Count != 0)
             {
-                // Update the statistics and return a success
-                // UpdateStatistics();
+                // Update Results to the Statistics 
+                UpdateEmotionResultsToStats(emotionResults);
+
+                // Return a success
                 return ConnectionResults.success;
             }
             else
@@ -125,6 +128,82 @@ namespace Emotion.Core
             FileStream fileStream = new FileStream(imagePath, FileMode.Open, FileAccess.Read);
             BinaryReader binaryReader = new BinaryReader(fileStream);
             return binaryReader.ReadBytes((int)fileStream.Length);
+        }
+
+        #endregion
+
+        #region Update Global Stats
+
+        /// <summary>
+        /// Send Emotion Call Results to Global Stats
+        /// </summary>
+        /// <param name="emotionResults">Emotion Results from Call</param>
+        public void UpdateEmotionResultsToStats (List<EmotionResults> emotionResults)
+        {
+            // Unique ID with DateTime Ticks in seconds
+            emotionConnectStats.idEmotionCall = Convert.ToInt32(DateTime.Now.Ticks / 1000000000);
+
+            // Number of Face Detected
+            emotionConnectStats.faceDetected = emotionResults.Count;
+
+            int idFace = 1;
+
+            // List of Face & main Emotion Detected
+            foreach (EmotionResults emotionFace in emotionResults)
+            {
+                EmotionResultsScores emotionFaceScores = emotionFace.Scores;
+
+                // Initiate Scores and Name of main Emotion
+                float emotionFaceScoresMain = emotionFace.Scores.anger;
+                string emotionFaceScoresNameMain = "Anger";
+
+                // Detect main Emotion
+                if (emotionFace.Scores.contempt > emotionFaceScoresMain)
+                {
+                    emotionFaceScoresMain = emotionFace.Scores.contempt;
+                    emotionFaceScoresNameMain = "Contempt";
+                }
+                else if (emotionFace.Scores.disgust > emotionFaceScoresMain)
+                {
+                    emotionFaceScoresMain = emotionFace.Scores.disgust;
+                    emotionFaceScoresNameMain = "Disgust";
+                }
+                else if (emotionFace.Scores.fear > emotionFaceScoresMain)
+                {
+                    emotionFaceScoresMain = emotionFace.Scores.fear;
+                    emotionFaceScoresNameMain = "Fear";
+                }
+                else if (emotionFace.Scores.happiness > emotionFaceScoresMain)
+                {
+                    emotionFaceScoresMain = emotionFace.Scores.happiness;
+                    emotionFaceScoresNameMain = "Happiness";
+                }
+                else if (emotionFace.Scores.neutral > emotionFaceScoresMain)
+                {
+                    emotionFaceScoresMain = emotionFace.Scores.neutral;
+                    emotionFaceScoresNameMain = "Neutral";
+                }
+                else if (emotionFace.Scores.sadness > emotionFaceScoresMain)
+                {
+                    emotionFaceScoresMain = emotionFace.Scores.sadness;
+                    emotionFaceScoresNameMain = "Sadness";
+                }
+                else if (emotionFace.Scores.surprise > emotionFaceScoresMain)
+                {
+                    emotionFaceScoresMain = emotionFace.Scores.surprise;
+                    emotionFaceScoresNameMain = "Surprise";
+                }
+                
+                emotionConnectStats.faceEmotion.Add(new Tuple<int, String>(idFace, emotionFaceScoresNameMain));
+
+                idFace += 1;
+            }            
+
+            // DateTime of the call
+            emotionConnectStats.callEmotionDate = DateTime.Now;
+
+            // Update Global Emotion Stats 
+            Statistics.EmotionStats.Add(emotionConnectStats); 
         }
 
         #endregion
