@@ -26,6 +26,26 @@ namespace Emotion.UWP
         public MainPage()
         {
             this.InitializeComponent();
-        }        
+        }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void EmotionButton(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void TextAnalysisButton(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void StatisticsButton(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

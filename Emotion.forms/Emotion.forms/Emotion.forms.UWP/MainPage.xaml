@@ -16,14 +16,19 @@
 
         <Grid Grid.Column="0"
               Name="Emotion">
+
             <Border Name="BorderEmotion" 
                     BorderBrush="#ffffff" 
                     Background="Navy">
-                <Image Name="EmotionButton" 
-                       Source="Resources\Image.png" 
+                <Button HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        Click="EmotionButton">
+                    <Image Name="EmotionImg" 
+                       Source="Resources\Image.png"
                        Stretch="Uniform" 
                        HorizontalAlignment="Center" 
-                       Opacity="0.6" />
+                       Opacity="0.6"/>                    
+                </Button>
             </Border>
             <TextBlock HorizontalAlignment="Center" 
                        Margin="10,10" 
@@ -41,11 +46,15 @@
             <Border Name="BorderTextAnalysis" 
                     BorderBrush="#ffffff"
                     Background="ForestGreen">
-                <Image Name="TextAnalysisButton" 
+                <Button HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        Click="TextAnalysisButton">
+                    <Image Name="TextAnalysisImg" 
                        Source="Resources\Text.png"
                        Stretch="Uniform" 
                        HorizontalAlignment="Center" 
                        Opacity="0.6"/>
+                </Button>
             </Border>
             <TextBlock HorizontalAlignment="Center" 
                        Margin="10,0" 
@@ -63,11 +72,15 @@
             <Border Name="BorderStatistics" 
                     BorderBrush="#ffffff" 
                     Background="PaleVioletRed">
-                <Image Name="StatisticsButton" 
+                <Button HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Stretch"
+                        Click="StatisticsButton">
+                    <Image Name="StatisticsImg" 
                        Source="Resources\Statistics.png" 
                        Stretch="Uniform" 
                        HorizontalAlignment="Center" 
                        Opacity="0.6" />
+                </Button>
             </Border>
             <TextBlock HorizontalAlignment="Center" 
                        Margin="10,10" 

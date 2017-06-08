@@ -17,9 +17,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Emotion\EmotionResultJson\EmotionResultsFaces.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Emotion\EmotionResultJson\EmotionResultsScores.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ImageAnalyzer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Statistics\EmotionStatistics.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Statistics\Statistics.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Statistics\StatisticsFormat.cs" />
@@ -37,10 +34,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)TextAnalytics\TextAnalyticsResultJson\TextAnalyticsResultsLanguagesDocuments.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
